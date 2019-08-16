@@ -1,2 +1,18 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+
+.price-badge{
+  font-size: 20px;
+}
+
+.instrument-condition{
+  margin-top: -8px;
+}
+
+.side-wrapper{
+  background-color: #f0f0f0;
+}
+
+.price-show{
+  font-size: 30px;
+}

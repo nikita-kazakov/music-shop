@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="row">
+    <%@instruments.each do |instrument| %>
+      <div class="col-3">
+        <img class="img-fluid" src="https://via.placeholder.com/400x300" alt="instrument image">
+        <a href="<%=instrument_path(instrument)%>" class="h4 mt-2"><%=instrument.brand%> <%=instrument.model %></a>
+        <p class="text-muted instrument-condition"><%=instrument.finish %></p>
+
+        <div class="info-wrapper d-flex justify-content-between">
+          <div class="badge badge-info price-badge">$<%=instrument.price %></div>
+          <div class="condition text-muted align-self-center"><%=instrument.condition %></div>
+        </div>
+      </div>
+    <%end %>
+  </div>
+</div>
+
+
+
+
+<h1>Instruments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Description</th>
+      <th>Condition</th>
+      <th>Finish</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @instruments.each do |instrument| %>
+      <tr>
+        <td><%= instrument.brand %></td>
+        <td><%= instrument.model %></td>
+        <td><%= instrument.description %></td>
+        <td><%= instrument.condition %></td>
+        <td><%= instrument.finish %></td>
+        <td><%= instrument.title %></td>
+        <td><%= instrument.price %></td>
+        <td><%= link_to 'Show', instrument %></td>
+        <td><%= link_to 'Edit', edit_instrument_path(instrument) %></td>
+        <td><%= link_to 'Destroy', instrument, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Instrument', new_instrument_path %>

@@ -1,0 +1,21 @@
+
+<%= simple_form_for @instrument, html:{ multipart: true} do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+
+    <%= f.input :brand, collection: Instrument::BRAND, prompt: "Select brand" %>
+    <%= f.input :model, collection: Instrument::MODEL, prompt: "Select brand" %>
+    <%= f.input :description %>
+    <%= f.input :condition %>
+    <%= f.input :finish %>
+    <%= f.input :title %>
+    <%= f.input :price %>
+    <%= f.input :image, as: :file, label: "Add Images" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

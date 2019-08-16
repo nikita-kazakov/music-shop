@@ -33,6 +33,22 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Gems from tutorial
+#gem 'bulma-rails', '~> 0.6.1'
+gem 'simple_form', '~> 3.5'
+
+# Bootstrap requires jquery-rails
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
+gem 'devise', '~> 4.4'
+gem 'gravatar_image_tag', '~> 1.2'
+
+#Carrierwave gem requires mini-magick
+gem 'carrierwave'
+gem 'mini_magick'
+
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

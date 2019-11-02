@@ -40,7 +40,7 @@ gem 'simple_form', '~> 3.5'
 # Bootstrap requires jquery-rails
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
-gem 'devise', '~> 4.4'
+gem 'devise', '~> 4.7'
 gem 'gravatar_image_tag', '~> 1.2'
 
 #Carrierwave gem requires mini-magick
